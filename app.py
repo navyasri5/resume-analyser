@@ -8,7 +8,6 @@ import re
 
 st.set_page_config(
     page_title="JD & Resume Analyzer",
-    page_icon="🎯",
     layout="wide"
 )
 
@@ -169,17 +168,17 @@ def score_color(score):
 
 
 # ── Header ──────────────────────────────────────────────────────────────────
-st.title("🎯 JD & Resume Analyzer")
+st.title(" JD & Resume Analyzer")
 st.caption("Powered by Claude AI · Paste or upload your JD and Resume to get instant analysis")
 
 # ── API Key ──────────────────────────────────────────────────────────────────
 with st.sidebar:
-    st.header("⚙️ Setup")
+    st.header(" Setup")
     api_key = st.text_input("Anthropic API Key", type="password", placeholder="sk-ant-...")
     st.caption("Get a free key at [console.anthropic.com](https://console.anthropic.com)")
     st.divider()
     st.markdown("**What this tool does:**")
-    st.markdown("- 📌 Extracts key points from JD\n- ✅ Checks ATS friendliness\n- 📊 Scores resume–JD match")
+    st.markdown("-  Extracts key points from JD\n-  Checks ATS friendliness\n-  Scores resume–JD match")
     st.divider()
     st.caption("Supports PDF, DOCX, or plain text paste")
 
@@ -187,7 +186,7 @@ with st.sidebar:
 col1, col2 = st.columns(2)
 
 with col1:
-    st.subheader("📄 Job Description")
+    st.subheader(" Job Description")
     jd_tab1, jd_tab2 = st.tabs(["Paste Text", "Upload File"])
     with jd_tab1:
         jd_text_input = st.text_area("Paste JD here", height=280, placeholder="Paste the full job description...")
@@ -195,7 +194,7 @@ with col1:
         jd_file = st.file_uploader("Upload JD", type=["pdf", "docx", "txt"], key="jd_file")
 
 with col2:
-    st.subheader("📋 Resume")
+    st.subheader(" Resume")
     res_tab1, res_tab2 = st.tabs(["Paste Text", "Upload File"])
     with res_tab1:
         resume_text_input = st.text_area("Paste resume here", height=280, placeholder="Paste the full resume text...")
@@ -208,7 +207,7 @@ resume_final = extract_text(resume_file) if resume_file else resume_text_input.s
 
 st.divider()
 
-analyze_btn = st.button("🚀 Analyze Now", type="primary", use_container_width=True)
+analyze_btn = st.button(" Analyze Now", type="primary", use_container_width=True)
 
 # ── Analysis ─────────────────────────────────────────────────────────────────
 if analyze_btn:
@@ -272,7 +271,7 @@ if analyze_btn:
 
         # JD Key Points
         with r1:
-            st.markdown("### 📌 JD Key Points")
+            st.markdown("###  JD Key Points")
 
             with st.expander("Required Skills", expanded=True):
                 tags = " ".join([f'<span class="tag tag-skill">{s}</span>' for s in jd_kp.get("required_skills", [])])
@@ -295,7 +294,7 @@ if analyze_btn:
 
         # ATS Analysis
         with r2:
-            st.markdown("### ✅ ATS Analysis")
+            st.markdown("###  ATS Analysis")
 
             with st.expander("What's working", expanded=True):
                 for p in ats.get("good_points", []):
