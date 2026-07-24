@@ -1,24 +1,24 @@
-# 🎯 JD & Resume Analyzer
+# JD & Resume Analyzer
 
 A fully local, **no API key required** Streamlit app that analyzes a Job Description and Resume using Python NLP techniques. No external AI services, no quotas, no cost.
 
 ---
 
-## ✨ Features
+##  Features
 
-- **📌 JD Key Points** — extracts required skills, soft skills, responsibilities, experience, and education from the job description
-- **✅ ATS Friendliness Check** — checks if your resume passes common ATS (Applicant Tracking System) filters, with a score and fix suggestions
-- **📊 Match Score** — calculates how relevant your resume is to the JD using TF-IDF similarity + skill matching
-- **🔍 Skill Gap Analysis** — shows matched skills (green), missing skills (red), strengths, and gaps
-- **📁 File Support** — accepts PDF, DOCX, or plain text paste for both JD and Resume
+- ** JD Key Points** — extracts required skills, soft skills, responsibilities, experience, and education from the job description
+- ** ATS Friendliness Check** — checks if your resume passes common ATS (Applicant Tracking System) filters, with a score and fix suggestions
+- ** Match Score** — calculates how relevant your resume is to the JD using TF-IDF similarity + skill matching
+- ** Skill Gap Analysis** — shows matched skills (green), missing skills (red), strengths, and gaps
+- ** File Support** — accepts PDF, DOCX, or plain text paste for both JD and Resume
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 ### Step 1 — Make sure Python is installed
 Download from [python.org](https://python.org) if not already installed.
-During installation, check ✅ **"Add Python to PATH"**
+During installation, check  **"Add Python to PATH"**
 
 ### Step 2 — Install dependencies
 Open your terminal (or VSCode terminal) and run:
@@ -35,7 +35,7 @@ The app will automatically open in your browser at `http://localhost:8501`
 
 ---
 
-## 🖥️ Running on VSCode
+##  Running on VSCode
 
 1. Install [VSCode](https://code.visualstudio.com)
 2. Install the **Python extension** from the Extensions panel (`Ctrl+Shift+X`)
@@ -49,7 +49,7 @@ streamlit run app.py
 
 ---
 
-## ☁️ Deploying on Streamlit Cloud (Free Hosting)
+##  Deploying on Streamlit Cloud (Free Hosting)
 
 1. Push your code to a **public GitHub repository**
 2. Go to [share.streamlit.io](https://share.streamlit.io) and sign in with GitHub
@@ -60,7 +60,7 @@ streamlit run app.py
 
 ---
 
-## 📁 File Structure
+##  File Structure
 
 ```
 resume-analyser/
@@ -71,7 +71,7 @@ resume-analyser/
 
 ---
 
-## ⚙️ How It Works (No AI Used)
+##  How It Works (No AI Used)
 
 | Feature | Technique |
 |---|---|
@@ -82,7 +82,7 @@ resume-analyser/
 
 ---
 
-## 📦 Dependencies
+##  Dependencies
 
 | Package | Purpose |
 |---|---|
@@ -93,7 +93,7 @@ resume-analyser/
 
 ---
 
-## 💡 Tips for Best Results
+##  Tips for Best Results
 
 - Paste the **full** job description including responsibilities and requirements
 - Use a **text-based PDF** resume (not a scanned image)
@@ -102,7 +102,7 @@ resume-analyser/
 
 ---
 
-## 🙋 Common Issues
+##  Common Issues
 
 **`streamlit` not found after install**
 → Restart your terminal and try again, or use `python -m streamlit run app.py`
